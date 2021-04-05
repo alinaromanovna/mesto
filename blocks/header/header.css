@@ -1,7 +1,7 @@
 .header {
 max-width: 880px;
 min-height: 74px;
-border: 1px solid green;
+border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 position: relative;
 margin: 45px auto 36px;
 }
