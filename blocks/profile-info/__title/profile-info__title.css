@@ -6,5 +6,24 @@
     margin: 0;
     margin-right: 18px;
     max-width: 294px;
-    height: 39px;
+}
+
+@media screen and (max-width: 987px) {
+    .profile-info__title {
+        font-size: 35px;
+        line-height: 41px;
+        letter-spacing: 0em;
+        margin-right: 14px;
+
+    }
+}
+
+@media screen and (max-width: 659px) {
+    .profile-info__title {
+        width: 189px;
+        font-size: 27px;
+        line-height: 33px;
+        text-align: center;
+        margin: 0;
+    }
 }

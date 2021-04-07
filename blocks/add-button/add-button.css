@@ -8,6 +8,7 @@
     background-image: url('../../images/add-button.svg');
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 18px;
     color: white;
     font-size: 34px;
     padding: 0;
@@ -17,4 +18,19 @@
 
 .add-button:hover {
     opacity: 0.6;
+}
+
+@media screen and (max-width: 987px) {
+    .add-button {
+        margin: 0px 30px;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 659px) {
+    .add-button {
+        margin: 0;
+        width: 100%;
+        background-size: 16px;
+    }
 }
