@@ -3,7 +3,12 @@
     width: 10px;
     height: 10px;
     object-fit: cover;
-    text-align: center;
-    vertical-align: middle;
     
+}
+
+@media screen and (max-width: 659px) {
+    .profile-info__edit-button-image {
+        height: 7.5px;
+        width: 7.5px;
+    }
 }

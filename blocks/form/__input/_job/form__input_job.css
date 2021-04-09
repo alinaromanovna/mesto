@@ -1,0 +1,10 @@
+.form__input_job {
+    margin-bottom: 48px;
+    
+}
+
+@media screen and (max-width: 659px) {
+    .form__input_job {
+        margin-bottom: 45px;
+    }
+}

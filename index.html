@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/style.css">
-    <script src="./scripts/index.js" defer></script>
     <title>Document</title>
 </head>
 <body class="page">
     <div class="popup">
         <div class="popup__container">
-            <img src="./images/popup-close-icon.svg" alt="кнопка закрыть" class="popup__close-button">
+            <button class="popup__close-button" type="reset"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form class="form">
-                <input class="form__input-name" type="text" >
-                <input class="form__input-job" type="text">
-                <button class="form__save-button">Сохранить</button>
+            <form class="form" name="profile">
+                <input class="form__input form__input_name" type="text" name="profile-name" >
+                <input class="form__input form__input_job" type="text" name="profile-job">
+                <button class="form__save-button" type="button">Сохранить</button>
             </form>
         </div>
     </div>
@@ -31,64 +30,65 @@
                     <div class="profile-info">
                         <div class="profile-info__name">
                             <h1 class="profile-info__title">Бигль Нора</h1>
-                            <button class="profile-info__edit-button">git 
-                            <img src="./images/Edit Button.svg" class="profile__edit-button-image" alt="Редактировать">
+                            <button class="profile-info__edit-button" type="button">
+                            <img src="./images/pen.svg" class="profile-info__edit-button-image" alt="Редактировать">
                             </button>
                         </div>
                         <p class="profile-info__subtitle">Бегу навстречу приключениям</p>
                     </div>
                 </div>
-                <button class="add-button"></button>
+                <button class="profile__add-button" type="button"></button>
             </section>
             <section class="elements">
                 <ul class="cards">
                     <li class="card">
-                            <img src="./images/card-hawaii-palm.jpg" class="card__img" alt="Гаваи">
-                            <div class="card__footer">
-                                <h2 class="card__sign">Гаваи</h2>
-                                <button class="card__button"><img src="./images/like.svg" class="card__button-like" alt="Лайк"> </button>
-                            </div>
+                        <img src="./images/card-hawaii-palm.jpg" class="card__img" alt="Гаваи">
+                        <div class="card__footer">
+                            <h2 class="card__sign">Гаваи</h2>
+                            <button class="card__button" type="button"><img src="./images/like.svg" class="card__button-like" alt="Лайк"> </button>
+                        </div>
                     </li>
                     <li class="card">
                         <img src="./images/card-surfing-bus.jpg" class="card__img" alt="Автобус">
                         <div class="card__footer">
                             <h2 class="card__sign">Серф-автобус</h2>
-                            <button class="card__button"><img src="./images/like.svg" class="card__button-like" alt="Лайк"> </button>
+                            <button class="card__button" type="button"><img src="./images/like.svg" class="card__button-like" alt="Лайк"> </button>
                         </div>
                     </li>
                     <li class="card">
                         <img src="./images/card-beach.jpg" class="card__img" alt="Пляж">
                         <div class="card__footer">
                             <h2 class="card__sign">Пляжик</h2>
-                            <button class="card__button"><img src="./images/like.svg" class="card__button-like" alt="Лайк"> </button>
+                            <button class="card__button" type="button"><img src="./images/like.svg" class="card__button-like" alt="Лайк"> </button>
                         </div>
                     </li>
                     <li class="card">
                         <img src="./images/card-roma.jpg" class="card__img" alt="Рим">
                         <div class="card__footer">
                             <h2 class="card__sign">Рим</h2>
-                            <button class="card__button"><img src="./images/like.svg" class="card__button-like" alt="Лайк"> </button>
+                            <button class="card__button" type="button"><img src="./images/like.svg" class="card__button-like" alt="Лайк"> </button>
                         </div>
                     </li>
                     <li class="card">
                         <img src="./images/card-venice.jpg" class="card__img" alt="Венеция">
                         <div class="card__footer">
                             <h2 class="card__sign">Венеция</h2>
-                            <button class="card__button"><img src="./images/like.svg" class="card__button-like" alt="Лайк"> </button>
+                            <button class="card__button" type="button"><img src="./images/like.svg" class="card__button-like" alt="Лайк"> </button>
                         </div>
                     </li>
                     <li class="card">
                         <img src="./images/card-barcelona.jpg" class="card__img" alt="Барселона">
                         <div class="card__footer">
                             <h2 class="card__sign">Барселона</h2>
-                            <button class="card__button"><img src="./images/like.svg" class="card__button-like" alt="Лайк"> </button>
+                            <button class="card__button" type="button"><img src="./images/like.svg" class="card__button-like" alt="Лайк"> </button>
                         </div>
                     </li>
                 </ul>
             </section>
         </main>
         <footer class="footer">
-            <h2 class="footer__copyright">&copy; 2021 Mesto Russia</h2>
+            <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
         </footer> 
+        <script src="./scripts/index.js" defer></script>
 </body>
 </html>
