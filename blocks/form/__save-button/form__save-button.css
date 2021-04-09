@@ -9,7 +9,12 @@
     padding: 0;
     border: none;
     min-height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
 
+}
+.form__save-button:hover {
+    opacity: 0.8;
 }
 
 @media screen and (max-width: 659px) {
