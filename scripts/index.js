@@ -7,8 +7,8 @@ let closePopupBtn = popupContainer.querySelector('.popup__close-button');
 let profile = document.querySelector('.profile');
 let profileInfo = profile.querySelector('.profile-info');
 let openPopupBtn = profileInfo.querySelector('.profile-info__edit-button');
-let profileName = profileInfo.querySelector('profile-info__title');
-let profileJob = profileInfo.querySelector('profile-info__subtitle');
+let profileName = profileInfo.querySelector('.profile-info__title');
+let profileJob = profileInfo.querySelector('.profile-info__subtitle');
 
 
 function openPopup () {
@@ -33,4 +33,5 @@ function formSubmitHandler(evt) {
 
 closePopupBtn.addEventListener('click', closePopup);
 popupContainer.addEventListener('submit', formSubmitHandler);
+
 
