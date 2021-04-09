@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./pages/style.css">
+    <script src="./scripts/index.js" defer></script>
     <title>Document</title>
 </head>
 <body class="page">
+    <div class="popup">
+        <div class="popup__container">
+            <img src="./images/popup-close-icon.svg" alt="кнопка закрыть" class="popup__close-button">
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <form class="form">
+                <input class="form__input-name" type="text" >
+                <input class="form__input-job" type="text">
+                <button class="form__save-button">Сохранить</button>
+            </form>
+        </div>
+    </div>
 
         <header class="header">
             <a class="header__logo" href="#"></a>
