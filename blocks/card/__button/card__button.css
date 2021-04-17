@@ -1,10 +1,7 @@
 .card__button {
-    background-color: #FFFFFF;
-    width: 22px;
-    height: 19px;
+    background-color: transparent;
     border: none;
     padding: 0;
-    margin: 5px 5px 1px 0;
     outline: none;
 
 }
