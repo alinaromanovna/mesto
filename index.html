@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body class="page">
-    <div class="popup popup-edit-profile">
+     <div class="popup popup-edit-profile">
         <div class="popup__container">
             <button class="popup__close-button" type="reset"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
@@ -32,8 +32,8 @@
     </div>
     <div class="popup popup-open-foto">
             <figure class="popup-open-foto__figure">
-                <img src="./images/card-barcelona.jpg" class="popup-open-foto__img">
-                <figcaption class="popup-open-foto__figcaption">Карачаево-Черкессия</figcaption>
+                <img src="" class="popup-open-foto__img">
+                <figcaption class="popup-open-foto__figcaption"></figcaption>
                 <button class="popup__close-button" type="reset"></button>
             </figure>
             
@@ -64,10 +64,10 @@
                     <template class="card-template">
                     <li class="card">
                         <img src="" class="card__img" alt="">
-                        <button class="card__button card__button_type_delete" type="button"><img class="card__button-img" src="./images/delete.svg"></button>
+                        <button class="card__button card__button_type_delete" type="button"><img class="card__button-img card__button-img_type-delete" src="./images/delete.svg"></button>
                         <div class="card__footer">
                             <h2 class="card__sign"></h2>
-                            <button class="card__button card__button_type_like" type="button"><img src="./images/like.svg" class="card__button-img" alt="Лайк"> </button>
+                            <button class="card__button card__button_type_like" type="button"><!--<img src="./images/like.svg"--><div class="card__button-img card__button-img_type-like"> </div></button>
                         </div>
                     </li>
                     </template>
@@ -76,7 +76,8 @@
         </main>
         <footer class="footer">
             <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
-        </footer> 
+        </footer>
+     
         <script src="./scripts/index.js" defer></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
 .popup-open-foto {
-    display: none;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, .9);
 }
