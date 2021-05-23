@@ -11,16 +11,24 @@
     min-height: 50px;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 48px;
 
 }
 .form__save-button:hover {
     opacity: 0.8;
 }
 
+.form__save-button:disabled {
+    background-color: #E5E5E5;
+    cursor: not-allowed;
+}
+
+
 @media screen and (max-width: 659px) {
     .form__save-button {
         min-height: 46px;
         font-size: 14px;
         line-height: 17px;
+        margin-top: 45px;
     }
 }
