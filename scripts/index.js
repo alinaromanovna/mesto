@@ -81,7 +81,7 @@ function closePopup (modal) {
     document.removeEventListener('keydown', checkEscExit );
 }
 
-function formSubmitHandler(evt) {
+function handlerSubmitForm(evt) {
   evt.preventDefault();
   profileName.textContent = inputName.value;
   profileJob.textContent = inputJob.value;
@@ -110,11 +110,12 @@ function addCardForm (evt) {
   addCard({name: inputValue, link: inputLink})
   closePopup(popupAddCard);
   resetInputs(popupAddCardForm);
+  addCardSaveButton.disabled = 'true';
 }
 
 closeEditPopupBtn.addEventListener('click', () => closePopup(popupEditProfile));
 
-popupContainer.addEventListener('submit', formSubmitHandler);
+popupContainer.addEventListener('submit', handlerSubmitForm);
 
 profileAddButton.addEventListener('click', () => openPopup(popupAddCard));
 
@@ -162,16 +163,16 @@ initialCards.forEach (function(currentItem) {
 
 
 
- function popupOverlayClickHandler(evt) {
+ function handlerClickPopupOverlay(evt) {
   const popupOpened = document.querySelector('.popup_opened');
   if (evt.target.classList.contains('popup') || evt.target.classList.contains('popup__close-button')) {
     closePopup(popupOpened);
   }
 }
 
-popupEditProfile.addEventListener('mousedown', popupOverlayClickHandler);
-popupAddCard.addEventListener('mousedown', popupOverlayClickHandler);
-popupOpenFoto.addEventListener('mousedown', popupOverlayClickHandler);
+popupEditProfile.addEventListener('mousedown', handlerClickPopupOverlay);
+popupAddCard.addEventListener('mousedown', handlerClickPopupOverlay);
+popupOpenFoto.addEventListener('mousedown', handlerClickPopupOverlay);
 
 
 
