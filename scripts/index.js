@@ -50,9 +50,6 @@ const profileName = profileInfo.querySelector('.profile-info__title');
 const profileJob = profileInfo.querySelector('.profile-info__subtitle');
 const cardsList = document.querySelector('.cards');
 
-// const cardItem = cardTemplate.querySelector('.card');
-// const buttonLike = cardTemplate.querySelector('.card__button_type_like');
-// const buttonLikeActive = buttonLike.querySelector('.card__button-img');
 const profileAddButton = profile.querySelector('.profile__add-button');
 const popupAddCard = document.querySelector('.popup-add-card');
 const popupAddCardContainer = popupAddCard.querySelector('.popup__container');
