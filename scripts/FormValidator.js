@@ -65,4 +65,8 @@ enableValidation() {
     this._setEventListeners();   
 }
 
+disabledButton() {
+    this._buttonElement.disabled = 'true'; 
+}
+
 }

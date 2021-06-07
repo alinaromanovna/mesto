@@ -33,8 +33,8 @@ const config = {
       formSelector: '.form',
       inputSelector: '.form__input',
       submitButtonSelector: '.form__save-button',
-      inputErrorClass: '.form__input_type_error',
-      errorClass: '.form__input_type_error-active',
+      inputErrorClass: 'form__input_type_error',
+      errorClass: 'form__input_type_error-active',
      }; 
 
 
@@ -95,6 +95,13 @@ openPopupEditBtn.addEventListener('click', function() {
   openPopup(popupEditProfile);
 });
 
+function handleOpenPhoto(name, link) {
+  popupOpenFotoImg.src = link;
+     popupOpenFotoSign.textContent = name;
+     popupOpenFotoImg.alt = name;
+     openPopup(popupOpenFoto);
+}
+
 function addCard(item) {
   cardsList.prepend(insertListItem(item));
 }
@@ -114,31 +121,31 @@ function addCardForm (evt) {
   addCardSaveButton.disabled = 'true';
 }
 
-closeEditPopupBtn.addEventListener('click', () => closePopup(popupEditProfile));
+// closeEditPopupBtn.addEventListener('click', () => closePopup(popupEditProfile));
 
 popupContainer.addEventListener('submit', handlerSubmitForm);
 
 profileAddButton.addEventListener('click', () => openPopup(popupAddCard));
 
-closeAddCardPopupBtn.addEventListener('click', () => closePopup(popupAddCard));
+// closeAddCardPopupBtn.addEventListener('click', () => closePopup(popupAddCard));
 
 popupAddCardContainer.addEventListener('submit', addCardForm);
  
 
-function insertListItem(item) {
+function renderCard(data) {
 
- const card = new Card(item.name, item.link, '.card-template')
+ const card = new Card(data.name, data.link, '.card-template', handleOpenPhoto)
 
     return card.render();
 };
 
 
 initialCards.forEach (function(currentItem) { 
-    const newCard = insertListItem(currentItem);
+    const newCard = renderCard(currentItem);
     cardsList.append(newCard);
  });
 
- popupOpenFotoCloseBtn.addEventListener('click', () => closePopup(popupOpenFoto));
+//  popupOpenFotoCloseBtn.addEventListener('click', () => closePopup(popupOpenFoto));
 
 
 
@@ -157,9 +164,10 @@ popupOpenFoto.addEventListener('mousedown', handlerClickPopupOverlay);
 
 const validationFormEdit = new FormValidator(config, popupEditProfile);
 validationFormEdit.enableValidation();
+validationFormEdit.disabledButton();
 
 
 const validationFormAdd = new FormValidator(config, popupAddCard);
 validationFormAdd.enableValidation();
-
+validationFormAdd.disabledButton();
 
