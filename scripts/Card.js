@@ -25,7 +25,7 @@ constructor (data, templateSelector, handleOpenFoto) {
   _setEventListenersCard () {
     this._butnRemove.addEventListener('click', () => {this._deleteCard()});
     this._butnLike.addEventListener('click', () => {this._handleLikeClick()});
-    this._cardImg.addEventListener('click', () => {this._handleOpenPhoto(this._link, this._name)});
+    this._cardImg.addEventListener('click', () => {this._handleOpenFoto(this._name, this._link)});
 };
   
    _deleteCard () {
