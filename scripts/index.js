@@ -103,7 +103,7 @@ function handleOpenPhoto(name, link) {
 }
 
 function addCard(item) {
-  cardsList.prepend(insertListItem(item));
+  cardsList.prepend(renderCard(item));
 }
 
 function resetInputs(form) {
@@ -120,34 +120,19 @@ function addCardForm (evt) {
   resetInputs(popupAddCardForm);
 }
 
-// closeEditPopupBtn.addEventListener('click', () => closePopup(popupEditProfile));
-
 popupContainer.addEventListener('submit', formSubmitHandler);
-
 profileAddButton.addEventListener('click', () => openPopup(popupAddCard));
-
-// closeAddCardPopupBtn.addEventListener('click', () => closePopup(popupAddCard));
-
 popupAddCardContainer.addEventListener('submit', addCardForm);
  
-
 function renderCard(data) {
-
  const card = new Card(data, '.card-template', handleOpenPhoto)
-
     return card.render();
 };
-
 
 initialCards.forEach (function(currentItem) { 
     const newCard = renderCard(currentItem);
     cardsList.append(newCard);
  });
-
-//  popupOpenFotoCloseBtn.addEventListener('click', () => closePopup(popupOpenFoto));
-
-
-
 
  function popupOverlayClickHandler(evt) {
   const popupOpened = document.querySelector('.popup_opened');
@@ -160,13 +145,8 @@ popupEditProfile.addEventListener('mousedown', popupOverlayClickHandler);
 popupAddCard.addEventListener('mousedown', popupOverlayClickHandler);
 popupOpenFoto.addEventListener('mousedown', popupOverlayClickHandler);
 
-
 const validationFormEdit = new FormValidator(config, popupEditProfile);
 validationFormEdit.enableValidation();
-validationFormEdit.disabledButton();
-
 
 const validationFormAdd = new FormValidator(config, popupAddCard);
 validationFormAdd.enableValidation();
-validationFormAdd.disabledButton();
-
