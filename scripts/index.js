@@ -120,7 +120,6 @@ function addCardForm (evt) {
   resetInputs(popupAddCardForm);
 }
 
-
 popupContainer.addEventListener('submit', handlerSubmitForm);
 profileAddButton.addEventListener('click', () => openPopup(popupAddCard));
 popupAddCardContainer.addEventListener('submit', addCardForm);
@@ -134,9 +133,6 @@ initialCards.forEach (function(currentItem) {
     const newCard = renderCard(currentItem);
     cardsList.append(newCard);
  });
-
-
-
 
  function handlerClickPopupOverlay(evt) {
   const popupOpened = document.querySelector('.popup_opened');
