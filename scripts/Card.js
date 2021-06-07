@@ -27,7 +27,7 @@ export default class Card {
       _setEventListenersCard () {
   
         this._butnRemove.addEventListener('click', () => {this._deleteCard()});
-        this._butnLike.addEventListener('click', () => {this._handleLikeClick()});
+        this._butnLike.addEventListener('click', () => {this._handleLike()});
         this._cardImg.addEventListener('click', () => {this._handleOpenPhoto(this._link, this._name)});
        }
   

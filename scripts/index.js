@@ -133,7 +133,7 @@ popupAddCardContainer.addEventListener('submit', addCardForm);
 
 function renderCard(data) {
 
- const card = new Card(data.name, data.link, '.card-template', handleOpenPhoto)
+ const card = new Card(data, '.card-template', handleOpenPhoto)
 
     return card.render();
 };
