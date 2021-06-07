@@ -1,8 +1,9 @@
 export default class Card {
-    constructor (name, link, templateSelector) {
-        this._name = name;
-        this._link = link;
+    constructor (data, templateSelector, handleOpenFoto) {
+        this._name = data.name;
+        this._link = data.link;
         this._templateSelector = templateSelector
+        this._handleOpenFoto = handleOpenFoto
     
         this._makeElements();
         this._setEventListenersCard();
@@ -26,26 +27,17 @@ export default class Card {
       _setEventListenersCard () {
   
         this._butnRemove.addEventListener('click', () => {this._deleteCard()});
-          
-        this._butnLike.addEventListener('click', () => {this._likeCard()});
-     
-        this._cardImg.addEventListener('click', () => {this._openFoto()});
-    
+        this._butnLike.addEventListener('click', () => {this._handleLikeClick()});
+        this._cardImg.addEventListener('click', () => {this._handleOpenPhoto(this._link, this._name)});
        }
   
    _deleteCard () {
      this._card.remove();
+     this._card = null;
     }
   
-    _likeCard () {
+    _handleLikeClick () {
      this._butnLike.classList.toggle('card__button-img_type-like-active');
-   }
-  
-   _openFoto () {
-     popupOpenFotoImg.src = this._link;
-     popupOpenFotoSign.textContent = this._name;
-     popupOpenFotoImg.alt = this._name;
-     openPopup(popupOpenFoto);
    }
   
    render () {
