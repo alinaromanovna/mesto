@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/style.css">
+    <!-- <link rel="stylesheet" href="./src/pages/style.css"> -->
     <title>Document</title>
 </head>
 <body class="page">
@@ -49,12 +49,12 @@
         <main class="main">
             <section class="profile">
                 <div class="profile__data">
-                    <img class="avatar" src="./images/avatar_Nora.jpg" alt="Аватар">
+                    <img class="avatar" src="<%=require('./images/avatar_Nora.jpg')%>" alt="Аватар">
                     <div class="profile-info">
                         <div class="profile-info__name">
                             <h1 class="profile-info__title">Бигль Нора</h1>
                             <button class="profile-info__edit-button" type="button">
-                            <img src="./images/pen.svg" class="profile-info__edit-button-image" alt="Редактировать">
+                            <img src="<%=require('./images/pen.svg')%>" class="profile-info__edit-button-image" alt="Редактировать">
                             </button>
                         </div>
                         <p class="profile-info__subtitle">Бегу навстречу приключениям</p>
@@ -68,7 +68,7 @@
                     <template class="card-template">
                     <li class="card">
                         <img src="#" class="card__img" alt="#">
-                        <button class="card__button card__button_type_delete" type="button"><img class="card__button-img card__button-img_type-delete" src="./images/delete.svg"></button>
+                        <button class="card__button card__button_type_delete" type="button"><img class="card__button-img card__button-img_type-delete" src="<%=require('./images/delete.svg')%>"></button>
                         <div class="card__footer">
                             <h2 class="card__sign"></h2>
                             <button class="card__button card__button_type_like" type="button"><div class="card__button-img card__button-img_type-like"> </div></button>
@@ -81,6 +81,6 @@
         <footer class="footer">
             <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
         </footer>
-        <script type="module" src="./pages/index.js"></script>
+        <!-- <script type="module" src="./src/pages/index.js"></script> -->
 </body>
 </html>
