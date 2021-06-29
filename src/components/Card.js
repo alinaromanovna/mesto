@@ -1,4 +1,4 @@
-export default class Card {
+export class Card {
 constructor (cardData, templateSelector, handleOpenFoto) {
     this._name = cardData.name;
     this._link = cardData.link;
