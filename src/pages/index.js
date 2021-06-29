@@ -34,7 +34,6 @@ const cardSection = new Section({
   '.cards')
 cardSection.renderAll();
 
-
 const popupWithFormEditProfile = new PopupWithForm({
   popupSelector: '.popup-edit-profile',
   onSubmit: (data) => {
@@ -46,7 +45,6 @@ const popupWithFormEditProfile = new PopupWithForm({
 popupWithFormEditProfile.setEventListeners();
 
 openPopupEditBtn.addEventListener('click', () => {
-
   const userData = userInfo.getUserInfo()
   inputName.value = userData.name;
   inputJob.value = userData.job;
@@ -64,7 +62,6 @@ const addCardPopup = new PopupWithForm({
     addCardPopup.close();
   }
 });
-
 addCardPopup.setEventListeners();
 
 profileAddButton.addEventListener('click', () => {
@@ -72,7 +69,6 @@ profileAddButton.addEventListener('click', () => {
   validationFormAdd.resetValidation();
   
 });
-
 
 const validationFormEdit = new FormValidator(config, popupEditProfile);
 validationFormEdit.enableValidation();
