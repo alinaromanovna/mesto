@@ -27,7 +27,6 @@ export class FormValidator {
         return this._inputList.some(inputElement => !inputElement.validity.valid);
     };
 
-
     toggleButtonState() {
         if (this._hasInvalidInput()) {
             this._buttonElement.disabled = true;
@@ -56,7 +55,6 @@ export class FormValidator {
         });
         this.toggleButtonState(this._buttonElement, this._inputList);
     };
-
 
     enableValidation() {
         this._formElement.addEventListener('submit', (evt) => {
