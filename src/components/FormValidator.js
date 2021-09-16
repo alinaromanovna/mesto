@@ -53,7 +53,7 @@ export class FormValidator {
             });
 
         });
-        this.toggleButtonState(this._buttonElement, this._inputList);
+        this.toggleButtonState();
     };
 
     enableValidation() {

@@ -54,8 +54,8 @@ function createCard(item, userId, templateSelector) {
           showErrorMessage(err)
         })
     },
-    handleCardDelete: () => {
-      popupWithCardDelete.open(card)
+    handleCardDelete: (id, el) => {
+      popupWithCardDelete.open(id, el)
     }
   },
     item._id);
@@ -81,11 +81,10 @@ const cardSection = new Section(
 
 const popupWithCardDelete = new PopupWithAgree({
   popupSelector: '.popup-delete-card',
-  onSubmit: (evt, card) => {
-    evt.preventDefault();
-    api.deleteCard(сard.getIdCard())
+  onSubmit: (id) => {
+    api.deleteCard(id)
       .then(res => {
-        card.deleteCard();
+        popupWithCardDelete.card.remove();
         popupWithCardDelete.close();
       })
       .catch(err => {
@@ -93,6 +92,7 @@ const popupWithCardDelete = new PopupWithAgree({
       })
   }
 })
+
 popupWithCardDelete.setEventListeners();
 
 const popupChangeAvatar = new PopupWithForm({
@@ -106,6 +106,9 @@ const popupChangeAvatar = new PopupWithForm({
       })
       .catch(err =>
         showErrorMessage(err))
+      .finally(() => {
+        renderLoading(submitUpdateAvatar, 'Сохранить')
+      })
   }
 })
 popupChangeAvatar.setEventListeners();
@@ -121,6 +124,9 @@ const popupWithFormEditProfile = new PopupWithForm({
       })
       .catch(err => {
         showErrorMessage(err)
+      })
+      .finally(() => {
+        renderLoading(submitEditProfile, 'Сохранить')
       })
   }
 
@@ -143,6 +149,9 @@ const addCardPopup = new PopupWithForm({
       })
       .catch(err => {
         showErrorMessage(err)
+      })
+      .finally(() => {
+        renderLoading(submitAddCard, 'Сохранить')
       })
   }
 });

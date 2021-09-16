@@ -10,12 +10,14 @@ export class PopupWithAgree extends Popup {
     setEventListeners() {
         super.setEventListeners();
         this._form.addEventListener('submit', (evt) => {
-            this._onSubmit(evt, this._card)
+            evt.preventDefault()
+            this._onSubmit(this._cardId, this.card)
 
         })
     }
-    open(card) {
-        this._card = card;
+    open(id, card) {
+        this.card = card;
+        this._cardId = id;
         super.open();
     }
 
